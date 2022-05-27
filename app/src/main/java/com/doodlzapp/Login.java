@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class Login extends AppCompatActivity {
         }else if(usuario.equals("danilo")){
             Intent intent = new Intent(Login.this, MainActivity.class);
             startActivity(intent);
+        }else{
+            Toast.makeText(this, "Ingreso Incorrecto", Toast.LENGTH_SHORT).show();
         }
     }
 }
